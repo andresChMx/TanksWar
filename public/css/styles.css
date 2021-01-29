@@ -1,0 +1,96 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    overflow:hidden;
+}
+.background{
+    position: absolute;
+    width:105%;
+    height:105vh;
+    background-image:url(../img/login_background.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    animation:iniciar 1s;
+    animation-fill-mode:forwards;
+    animation-delay: 0.3s;
+}
+.container{
+
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+.form{
+    position:absolute;
+    background:rgba(32, 32, 32, 0.66);
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+    width:20%;
+    height:80%;
+    color:rgb(89, 195, 89);
+    text-align:center;
+    animation:form-animation 2s;
+    animation-delay: 0.8s;
+    animation-fill-mode:forwards;
+    filter:opacity(0.0);
+}
+.form h2{
+    padding:100px 0;
+    font-family:verdana;
+    font-size:4.5em;
+    font-weight: lighter;
+    text-align:center;
+}
+.form .input-nombre{
+    width:50%;
+    display:inline-block;
+    background:transparent;
+    padding:1rem;
+    border:none;
+    color:white;
+    font-size:1.4em;
+    box-shadow:0px 0px white inset,
+                0px -2px rgb(89, 195, 89) inset;
+    transition:all 1s;
+}
+
+.form .input-nombre:focus{
+    outline:none;
+    box-shadow:2px 2px white inset,
+    -3px -3px rgb(89, 195, 89) inset;
+}
+.form .btn-ingresar{
+    display:block;
+    width:50%;
+    padding:15px 0;
+    background:black;
+    color:rgba(255,255,255,0.8);
+    border:none;
+    opacity: 1 !important;
+    margin:140px auto;
+    font-size:1.2em;
+    font-weight: lighter;
+    font-family:verdana,sans-serif;
+}
+@keyframes iniciar{
+    0%{
+        filter:blur(0px);
+    }
+    100%{
+        filter:blur(8px);
+    }
+}
+@keyframes form-animation{
+    0%{
+        filter:opacity(0.0);
+    }
+    100%{
+        filter:opacity(1);
+    }
+}
